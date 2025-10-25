@@ -1,0 +1,18 @@
+BUILD
+-------
+cd ~/rf_ws
+colcon build --symlink-install
+source ~/rf_ws/install/setup.bash
+
+
+LAUNCH GAZEBO
+--------------
+ros2 launch lab5_gz_environment gazebo_lab5.launch.py
+
+LAUNCH MOVEITSIM
+-------------------
+ros2 launch franka_gazebo_bringup moveit_sim.launch.py
+
+RUN PNP NODE
+-------------
+ros2 run lab5_pkg pnp
